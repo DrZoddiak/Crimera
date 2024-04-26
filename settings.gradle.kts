@@ -1,5 +1,4 @@
-// todo: Change me! I am the root name of this project!
-rootProject.name = "SpongeKotlinExamplePlugin"
+rootProject.name = "Crimera"
 
 pluginManagement {
     repositories {

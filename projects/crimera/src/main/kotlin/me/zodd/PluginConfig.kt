@@ -1,8 +1,8 @@
-package com.github.replaceme
+package me.zodd
 
 import org.spongepowered.configurate.objectmapping.ConfigSerializable
 
 @ConfigSerializable
 class PluginConfig {
-    val replaceMe: Boolean = TODO()
+    val replaceMe: Boolean = false
 }

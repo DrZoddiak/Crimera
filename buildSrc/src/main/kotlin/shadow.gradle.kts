@@ -8,7 +8,6 @@ plugins {
 tasks {
     tasks.withType(ShadowJar::class) {
         archiveClassifier.set("")
-        // Only configurations marked with `shadow` will be included.
         configurations = listOf(project.configurations.findByName("shadow"))
         archiveBaseName.set("${project.name}-${project.version}")
     }

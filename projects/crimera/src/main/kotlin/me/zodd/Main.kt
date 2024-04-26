@@ -1,4 +1,4 @@
-package com.github.replaceme
+package me.zodd
 
 import com.google.inject.Inject
 import org.apache.logging.log4j.Logger
@@ -15,8 +15,16 @@ class Main @Inject internal constructor(
     @DefaultConfig(sharedRoot = false)
     private val config: ConfigurationReference<CommentedConfigurationNode>
 ) {
+
     @Listener
     fun ConstructPluginEvent.onConstruction() {
-        logger.info("Hello world!")
+        loadConfig()
+    }
+
+    private fun loadConfig(): PluginConfig {
+        logger.info("Loading config...")
+        val ref = config.referenceTo(PluginConfig::class.java)
+        config.save()
+        return ref.get() ?: PluginConfig()
     }
 }
