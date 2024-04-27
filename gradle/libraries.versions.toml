@@ -1,0 +1,9 @@
+[versions]
+sponge8 = "8.2.0"
+adventure-api = "4.14.0"
+command-dsl = "dsl-SNAPSHOT"
+
+[libraries]
+sponge8 = { group = "org.spongepowered", name = "spongeapi", version.ref = "sponge8" }
+kyori = { group = "net.kyori", name = "adventure-api", version.ref = "adventure-api" }
+commanddsl = { group = "com.github.DrZoddiak.sponge-command-dsl", name = "spongeDSL", version.ref = "command-dsl" }

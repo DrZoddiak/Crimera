@@ -1,0 +1,12 @@
+[versions]
+shadow = "8.1.1"
+spongegradle = "2.2.0"
+kotlin = "1.9.21"
+
+[plugins]
+shadow = { id = "com.github.johnrengelman.shadow", version.ref = "shadow" }
+
+[libraries]
+shadow = { group = "com.github.johnrengelman", name = "shadow", version.ref = "shadow" }
+spongegradle = { group = "org.spongepowered", name = "spongegradle-plugin-development", version.ref = "spongegradle" }
+kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }

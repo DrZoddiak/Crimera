@@ -6,9 +6,11 @@ group = "me.zodd"
 
 repositories {
     mavenCentral()
+    maven("https://jitpack.io")
+    maven("https://repo.spongepowered.org/repository/maven-public/")
 }
 
-val javaTarget = 8 // Sponge targets a minimum of Java 8
+val javaTarget = 17 // Sponge targets a minimum of Java 8
 java {
     sourceCompatibility = JavaVersion.toVersion(javaTarget)
     targetCompatibility = JavaVersion.toVersion(javaTarget)

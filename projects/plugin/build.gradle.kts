@@ -1,15 +1,16 @@
 import org.spongepowered.plugin.metadata.model.PluginDependency
 
-plugins {
-    id("spongeplugin")
-}
-
 version = "1.0-SNAPSHOT"
 
+plugins {
+    spongeplugin
+    shadow
+}
+
 sponge {
-    plugin("crimera") {
+    plugin("sendaroo") {
         version(project.version.toString())
-        displayName("Crimera")
+        displayName("Sendaroo")
         entrypoint("me.zodd.Main")
         description("Will eventually do something!")
         dependency("mckotlin-sponge") {
@@ -20,3 +21,6 @@ sponge {
     }
 }
 
+dependencies {
+    shadow(project(":Crimera-api", "shadow"))
+}
